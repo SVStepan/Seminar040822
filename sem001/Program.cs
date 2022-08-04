@@ -34,7 +34,7 @@
 Console.Clear(); // Отчистка терминала
 
 Console.Write("введите номер дня недели:");
-int day = Convert/ToInt32(Console.ReadLine());
+int day = Convert.ToInt32(Console.ReadLine());
 
 if(day < 1 || day >7)
 {
@@ -44,10 +44,30 @@ else
 {
     if (day == 1)
     {
-        Console.Write("Monday");
+        Console.Write("Понедельник");
     }
     if (day == 2)
     {
-        Console.Write("Tuesday");
+        Console.Write("Вторник");
+    }
+    if (day == 3)
+    {
+        Console.Write("Среда");
+    }
+    if (day == 4)
+    {
+        Console.Write("Четверг");
+    }
+    if (day == 5)
+    {
+        Console.Write("Пятница");
+    }
+    if (day == 6)
+    {
+        Console.Write("Суббота");
+    }
+    if (day == 6)
+    {
+        Console.Write("Воскресенье");
     }
 }
