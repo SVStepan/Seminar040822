@@ -16,14 +16,38 @@
 // a = -3 b = 9 -> нет
 
 
-Console.Clear(); // Отчистка терминала
-Console.Write("введите число 1: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("введите число 2: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-int sq = num2 * num2;
-if (num1 == sq)
-    Console.Write("Перво число является квадратом второго");
-else
-    Console.Write("Перво число не является квадратом второго");
+// Console.Clear(); // Отчистка терминала
+// Console.Write("введите число 1: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("введите число 2: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+// int sq = num2 * num2;
+// if (num1 == sq)
+//     Console.Write("Перво число является квадратом второго");
+// else
+//     Console.Write("Перво число не является квадратом второго");
 
+// 3. Напишите программу, которая будет выдавать название дня недели по заданному номеру.
+// 	3 -> Среда 
+// 5 -> Пятница
+
+Console.Clear(); // Отчистка терминала
+
+Console.Write("введите номер дня недели:");
+int day = Convert/ToInt32(Console.ReadLine());
+
+if(day < 1 || day >7)
+{
+    Console.Write("Нет такого дня недели");
+}
+else
+{
+    if (day == 1)
+    {
+        Console.Write("Monday");
+    }
+    if (day == 2)
+    {
+        Console.Write("Tuesday");
+    }
+}
