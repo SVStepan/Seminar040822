@@ -31,43 +31,69 @@
 // 	3 -> Среда 
 // 5 -> Пятница
 
+// Console.Clear(); // Отчистка терминала
+
+// Console.Write("введите номер дня недели:");
+// int day = Convert.ToInt32(Console.ReadLine());
+
+// if(day < 1 || day >7)
+// {
+//     Console.Write("Нет такого дня недели");
+// }
+// else
+// {
+//     if (day == 1)
+//     {
+//         Console.Write("Понедельник");
+//     }
+//     if (day == 2)
+//     {
+//         Console.Write("Вторник");
+//     }
+//     if (day == 3)
+//     {
+//         Console.Write("Среда");
+//     }
+//     if (day == 4)
+//     {
+//         Console.Write("Четверг");
+//     }
+//     if (day == 5)
+//     {
+//         Console.Write("Пятница");
+//     }
+//     if (day == 6)
+//     {
+//         Console.Write("Суббота");
+//     }
+//     if (day == 6)
+//     {
+//         Console.Write("Воскресенье");
+//     }
+// }
+
+
+// 4. Напишите программу, которая на входе принимает одно число (N) а на выходе показывает все целые числа в промежутке от -N до N
+
 Console.Clear(); // Отчистка терминала
-
-Console.Write("введите номер дня недели:");
-int day = Convert.ToInt32(Console.ReadLine());
-
-if(day < 1 || day >7)
+int N = 15;
+int i = -N;
+while (i <= N)
 {
-    Console.Write("Нет такого дня недели");
+    Console.Write(i + " ");
+    i++;
 }
-else
+
+Console.WriteLine();
+
+int m = new Random().Next(1, 15);
+int x = -m;
+while (x <= m)
 {
-    if (day == 1)
-    {
-        Console.Write("Понедельник");
-    }
-    if (day == 2)
-    {
-        Console.Write("Вторник");
-    }
-    if (day == 3)
-    {
-        Console.Write("Среда");
-    }
-    if (day == 4)
-    {
-        Console.Write("Четверг");
-    }
-    if (day == 5)
-    {
-        Console.Write("Пятница");
-    }
-    if (day == 6)
-    {
-        Console.Write("Суббота");
-    }
-    if (day == 6)
-    {
-        Console.Write("Воскресенье");
-    }
+    Console.Write(x + " ");
+    x++;
 }
+
+Console.WriteLine();
+
+// 5. Напишите программу, которая принимает на вход трехзначное число и на выходе показывает посленюю цифру этого числа
