@@ -72,40 +72,39 @@ Console.WriteLine();
 
 
 // 5. Напишите программу, которая на вход принимает одно число (N), а на выходе показывает все целые числа в промежутке от -N до N.
-// Console.Clear();
-// int N = 15;
-// int i = -N;
-// while (i <= N)
-// {
-//     Console.Write(i + " ");
-//     i++;
-// }
 
-// Console.WriteLine();
+int N = 15;
+int i = -N;
+while (i <= N)
+{
+    Console.Write(i + " ");
+    i++;
+}
 
-// int m = new Random().Next(1, 15);
-// int x = -m;
-// while (x <= m)
-// {
-//     Console.Write(x + " ");
-//     x++;
-// }
-// Console.WriteLine();
+Console.WriteLine();
+
+int m = new Random().Next(1, 15);
+int x = -m;
+while (x <= m)
+{
+    Console.Write(x + " ");
+    x++;
+}
+Console.WriteLine();
 
 // 6. Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает последнюю цифру этого числа.
-// Console.Clear();
 
-// int num = 735;
-// int lastnum = num % 10;  // % деление на модуль - нахождение остатка при деление на 10
-// Console.WriteLine(lastnum);
+int num = 735;
+int lastnum = num % 10;  // % деление на модуль - нахождение остатка при деление на 10
+Console.WriteLine(lastnum);
 
-// Console.WriteLine("Введите 3-х значное число:");
-// int n = Convert.ToInt32(Console.ReadLine());
-// int f = n % 10;  // % деление на модуль - нахождение остатка при деление на 10
-// Console.WriteLine(f);
+Console.WriteLine("Введите 3-х значное число:");
+int k = Convert.ToInt32(Console.ReadLine());
+int f = k % 10;  // % деление на модуль - нахождение остатка при деление на 10
+Console.WriteLine(f);
 
 
-// int numberB = new Random().Next(100,999); //100 ... 999;
-// Console.WriteLine(numberB);
-// int B = numberB % 10;  // % деление на модуль - нахождение остатка при деление на 10
-// Console.WriteLine(B);
+int numberG = new Random().Next(100,999); //100 ... 999;
+Console.WriteLine(numberG);
+int G = numberG % 10;  // % деление на модуль - нахождение остатка при деление на 10
+Console.WriteLine(G);

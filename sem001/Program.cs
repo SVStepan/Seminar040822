@@ -3,7 +3,7 @@
 // Console.Clear(); // Отчистка терминала
 
 // Console.Write("введите число: ");
-// int num = Convert.ToInt32(Console.ReadLine());  // конвертирование 
+// int num = Convert.ToInt32(Console.ReadLine());  // конвертирование в целое число
 // int sqrt = num * num;
 // // num *= num;   Методы умножения числа на себя, возведение в квадрат
 // // sqrt1 = Convert.ToInt32(Math.Pow(num' 2));
