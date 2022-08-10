@@ -10,7 +10,7 @@ Console.WriteLine(numb);
 int A = numb / 10;
 int B = A % 10;
 Console.WriteLine($"число {B}");
-
+Console.WriteLine();
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
 // 645 -> 5
@@ -33,9 +33,31 @@ else
 {
     Console.WriteLine("третьей цифры нет");
 }
-
+Console.WriteLine();
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
 // 6 -> да
 // 7 -> да
 // 1 -> нет
+
+int dayofweek = new Random().Next(1,20); //1 2 3 ... 7;
+Console.WriteLine(dayofweek);
+//                         0              1         2        3           4         5            6
+string[] daysofweek = { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
+
+if ((dayofweek) > 7)
+{
+        Console.WriteLine("Нет дня недели соответсвующей введенной цифре");
+        return;
+}
+
+if ((dayofweek) > 5)
+{
+    Console.WriteLine(daysofweek[dayofweek - 1]);
+    Console.WriteLine("выходной день");
+}
+else
+{
+    Console.WriteLine(daysofweek[dayofweek-1]);
+    Console.WriteLine("Это рабочий день");
+}
