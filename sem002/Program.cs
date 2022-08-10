@@ -20,26 +20,26 @@ Console.WriteLine($"число {D}{B}");
 // Если число 2 не кратно числу 1, то программа выводит остаток от деления.
 
 Console.Write("введите первое число:");
-int N = Convert.ToInt32(Console.ReadLine());
+int N1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("введите второе число:");
-int M = Convert.ToInt32(Console.ReadLine());
+int N2 = Convert.ToInt32(Console.ReadLine());
 
-if (M % N == 0)
+if (N2 % N1 == 0)
 {
     Console.WriteLine("Второе число кратно первому");
 }
 else
 {
-    Console.WriteLine($"Второе число не кратно первому, остаток от деления: {M % N}");
+    Console.WriteLine($"Второе число не кратно первому, остаток от деления: {N2 % N1}");
 }
 
-if (N % M == 0)
+if (N1 % N2 == 0)
 {
     Console.WriteLine("первое число кратно второму");
 }
 else
 {
-    Console.WriteLine($"Первое число не кратно второму, остаток от деления: {N % M}");
+    Console.WriteLine($"Первое число не кратно второму, остаток от деления: {N1 % N2}");
 }
 
 // Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.

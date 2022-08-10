@@ -17,10 +17,22 @@ Console.WriteLine($"число {B}");
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-int number = new Random().Next(100, 9999);
-Console.WriteLine(number);
 
+Console.Write("введите число:");
+int numF = Convert.ToInt32(Console.ReadLine());
 
+// int numF = new Random().Next(1, 9999);
+// Console.WriteLine(numF);
+
+string number = Convert.ToString(numF);
+if (number.Length>=3)
+{
+Console.WriteLine(number[2]);
+}
+else 
+{
+    Console.WriteLine("третьей цифры нет");
+}
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
