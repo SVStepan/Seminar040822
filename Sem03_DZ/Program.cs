@@ -9,11 +9,10 @@ Console.Clear();
 Console.WriteLine("введите число");
 int P = Convert.ToInt32(Console.ReadLine());
 // int P = 25152;
-
 int K = 0;
-if (P > 9999 && 100000 < P)
+int P1 = P;
+if (P > 9999 && P < 100000)
 { 
-    int P1 = P;
     while (P1 > 0)  // (условие пока) (Условие продолжения)  оператор цикла
     {
         K = K * 10 + P1 % 10;
