@@ -126,3 +126,37 @@ for (int k = 0; k < arr1.Length; k++)
     Console.Write(arr1[k] + " ");
 }
 Console.WriteLine();
+
+
+
+// int MultipNums(int number)
+// {
+//     int mltpl = 1;
+//     for (int i = 1; i <= Math.Abs(number); i++)
+//     {
+//         mltpl *= i;
+//     } 
+//     return mltpl;
+// }
+
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int num = int.Parse(Console.ReadLine() ?? "");
+// Console.WriteLine($"Произведение чисел от 1 до {num}: {MultipNums(num)}");
+
+
+// double takeLength(long number)
+// {
+//     return Math.Truncate(Math.Log10(number));
+// }
+// Console.WriteLine("ВВедите число");
+// long inputNumber = Convert.ToInt64(Console.ReadLine());
+// Console.WriteLine("Количество знаков в числе " + takeLength(inputNumber));
+
+
+// 1
+// Console.Write("Введите число - ");
+// double N = Convert.ToDouble(Console.ReadLine());
+
+// double digits_num = Math.Floor(Math.Log10(N) + 1);
+// Console.WriteLine ("Количество цифр во введенном числе - " + digits_num);
