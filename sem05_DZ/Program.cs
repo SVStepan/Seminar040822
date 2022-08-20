@@ -29,11 +29,11 @@ int min = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите последнее число случайно генерируемого диапазона : "); // до 999 
 int max = Convert.ToInt32(Console.ReadLine());
 
-// if (min < 100 || max > 1000 )  // Проверка на ввод диапазона с 3-х значными числами.
-// {
-//     Console.WriteLine("в указанный диапазон входят не только 3-х значные числа");
-//     return;
-// }
+if (min < 100 || max > 1000 )  // Проверка на ввод диапазона с 3-х значными числами.
+{
+    Console.WriteLine("в указанный диапазон входят не только 3-х значные числа");
+    return;
+}
 
 int[] myRandArr = CreateRandomArray(num, min, max);
 Console.Write("массив с положительными 3-х значными числами : ");
@@ -44,10 +44,13 @@ Console.WriteLine("-------");
 int count = 0;  // вводим переменную счетчика
 int sum_not_even = 0; // вводим переменную счетчика суммы не четных чисел
 int sum_even = 0; // вводим переменную счетчика суммы  четных чисел
-int poz_not_even = 0;
-int poz_even = 0; 
-int sum_poz_not_even =0;
-int sum_poz_even =0;
+int sum_poz_not_even = 0;  // вводим переменную сумма элементов позиций не четных чисел
+int sum_poz_even = 0; // вводим переменную сумма элементов позиций четных чисел
+int poz_sum_not_even =0; // вводим переменную суммы числе на не четных позициях массива
+int poz_sum_even =0; // вводим переменную суммы числе на четных позициях массива
+int difference = 0;
+int Minimum = myRandArr[0];
+int Maximum = myRandArr[0];
 for (int i = 0; i < myRandArr.Length; i++)
 {
     if (myRandArr[i] % 2 == 0)
@@ -55,33 +58,44 @@ for (int i = 0; i < myRandArr.Length; i++)
        Console.WriteLine(myRandArr[i] + " число четное");
        count = count + 1;
        sum_even = sum_even + myRandArr[i];
-       poz_even = poz_even + i;
+       sum_poz_even = sum_poz_even + i;
     }
     else
     {
         Console.WriteLine(myRandArr[i] + " число не четное");
         count = count + 0;
         sum_not_even = sum_not_even + myRandArr[i];
-        poz_not_even = poz_not_even + i;
+        sum_poz_not_even = sum_poz_not_even + i;
     }
         
     if (i % 2 == 0)
     {
-        sum_poz_even = sum_poz_even + myRandArr[i];
+        poz_sum_even = poz_sum_even + myRandArr[i];
     }
     else
     {
-        sum_poz_not_even = sum_poz_not_even + myRandArr[i];
+        poz_sum_not_even = poz_sum_not_even + myRandArr[i];
     }
+    if (myRandArr[i] < Minimum)
+        {
+           Minimum = myRandArr[i];
+        }
+    if (myRandArr[i] > Maximum)
+        {
+        Maximum = myRandArr[i];
+        }
+        
+    difference = Maximum - Minimum;
+
 }
 
-
-Console.WriteLine($"В массиве 3-х значных чисел, четных = {count}");
+Console.WriteLine("-------");
+Console.WriteLine($"В массиве 3-х значных чисел, четных чисел = {count}");
 Console.WriteLine($"сумма не четных чисел = {sum_not_even}");
 Console.WriteLine($"сумма четных чисел = {sum_even}");
 Console.WriteLine("-------");
-Console.WriteLine($"сумма элементов позиций не четных чисел = {poz_not_even}");
-Console.WriteLine($"сумма элементов позиций четных чисел = {poz_even}");
+Console.WriteLine($"сумма элементов позиций не четных чисел = {sum_poz_not_even}");
+Console.WriteLine($"сумма элементов позиций четных чисел = {sum_poz_even}");
 Console.WriteLine("-------");
 
 // решение задания массива и вывода как в лекции
@@ -136,12 +150,24 @@ Console.WriteLine("-------");
 
 
 // условие и решение прописал в задаче выше. Здесь только вывод.
-Console.WriteLine($"сумма не четных позиций элементов массива = {sum_poz_not_even}");
-Console.WriteLine($"сумма  четных  позиций элементов массива = {sum_poz_even}");
+Console.WriteLine($"сумма не четных позиций элементов массива = {poz_sum_not_even}");
+Console.WriteLine($"сумма  четных  позиций элементов массива = {poz_sum_even}");
 
 
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
+
+// Задание выполнил с целыми числами!!!
+// условие и решение прописал в задаче выше. Здесь только вывод.
+
+
+Console.WriteLine("-------");
+Console.WriteLine($"Максимальное число : {Maximum}");
+Console.WriteLine($"Максимальное число : {Minimum}");
+Console.WriteLine ($"разница между максимальным и минимальным числом массива = {difference}");
+
+
+
 
 //  Math.Round(num / 10000, MidpointRounding.ToZero
