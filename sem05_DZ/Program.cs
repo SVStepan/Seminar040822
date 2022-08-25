@@ -168,6 +168,131 @@ Console.WriteLine($"Максимальное число : {Minimum}");
 Console.WriteLine ($"разница между максимальным и минимальным числом массива = {difference}");
 
 
-
-
 //  Math.Round(num / 10000, MidpointRounding.ToZero
+
+
+// Решение коллег
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, 
+//которая покажет количество чётных чисел в массиве.
+
+// int[] arr = new int [15];
+// Random rand = new Random();
+// int count = 0;
+
+// for (int i = 0; i < arr.Length; i++)
+// {
+//     arr[i] = rand.Next(100,1000);
+//     Console.Write($"{arr[i]}, ");
+
+//     if (arr[i] % 2 == 0)
+//     {
+//         count += 1;
+//     }
+// }
+// Console.WriteLine();
+// Console.WriteLine($"There is {count} even numbers in the array.");
+
+
+// Console.Clear();
+// int[] array = Random(10,100,999);
+// Console.WriteLine($"[{String.Join(", ", array)}]");
+// int chet=0;
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (array[i]%2==0)
+//     {
+//         chet ++;
+//     }
+// }
+// Console.WriteLine($"Количество четных чисел в данном массиве: {chet}");
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+// Console.Clear();
+// int[] array = Random(4,1,99);
+// Console.WriteLine($"[{String.Join(", ", array)}]");
+// int sum=0;
+// for (int i = 1; i < array.Length; i+=2)
+// {
+//     sum=sum+array[i];
+// }
+// Console.WriteLine($"Суммa элементов, стоящих на нечётных позициях: {sum}");
+
+
+// int[] arr = new int [15];
+// Random rand = new Random();
+// int sum = 0;
+
+// for (int i = 0; i < arr.Length; i++)
+// {
+//     arr[i] = rand.Next(100,1000);
+//     Console.Write($"{arr[i]}, ");
+
+//     if (arr[i] % 2 != 0)
+//     {
+//         sum += arr[i];
+//     }
+// }
+// Console.WriteLine();
+// Console.WriteLine($"The sum of elements on odd positions = {sum}");
+
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+// Console.Clear();
+// int[] array = Random(10,1,10);
+// Console.WriteLine($"[{String.Join(", ", array)}]");
+// int min = array[0];
+// int max = array[0];
+// for (int i = 1; i < array.Length; i++)
+// {
+//     if (array[i]>max)
+//     {
+//         max=array[i];
+//     }
+//     if (array[i]<min)
+//     {
+//         min=array[i];
+//     }
+// }
+// Console.WriteLine($"Разницу между максимальным и минимальным элементов массива: {max-min}");
+
+
+// void NewRandomArray (int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Random rand = new Random();
+//         array[i] = rand.Next(-100, 100);
+//         Console.Write($"[{array[i]}] ");
+//     }
+// }
+
+
+// void MinMaxSub (int[] array)
+// {
+//     int min = 100;
+//     int max = -100;
+
+//     for (int i = 0; i < array.Length; i++)
+//     {
+        
+//         if (array[i] > max)
+//         {
+//             max = array[i];
+//         }
+//         else if (array[i] < min)
+//         {
+//             min = array[i];
+//         }
+//     }
+//     Console.WriteLine($"{max} is the maximal element of Your array");
+//     Console.WriteLine($"{min} is the minimal element of Your array");
+//     Console.WriteLine($"And their difference = {max - min}");
+// }
+
+
+// int[] arr = new int[15];
+// NewRandomArray(arr);
+// Console.WriteLine();
+// MinMaxSub(arr);
