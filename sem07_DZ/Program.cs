@@ -126,6 +126,11 @@ for (int i = 0; i < array2.GetLength(0); i++)
     }
     ContLine++;
 }
+ContColum = ContColum / ContLine;
+
+Console.WriteLine($"Столбцов - {ContColum}");
+Console.WriteLine($"Линий - {ContLine}");
+Console.WriteLine();
 
 Console.WriteLine("Введите позицию строку Line");
 int Line = Convert.ToInt32(Console.ReadLine());
@@ -144,7 +149,6 @@ else
 
 
 // Задача 3: Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-
 // Например, задан массив:
 // 1 4 7 2
 // 5 9 2 3
@@ -152,4 +156,18 @@ else
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 
+// используем функцию  и элементы прошлого задания
 
+Console.WriteLine();
+double ArithmeticMean = 0;
+
+for (int j = 0; j < array2.GetLength(1); j++)
+{
+    for (int i = 0; i < array2.GetLength(0); i++)
+    {
+        ArithmeticMean = ArithmeticMean + array2[i,j];
+    }
+    ArithmeticMean = ArithmeticMean / ContLine;
+    Console.WriteLine($"среднее арифметическое {ArithmeticMean}; ");
+    ArithmeticMean = 0;
+}
