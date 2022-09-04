@@ -3,9 +3,9 @@
 
 Console.Clear();
 Console.Write("Введите N: ");
-int n=int.Parse(Console.ReadLine());
+int n = int.Parse(Console.ReadLine());
 
-Console.WriteLine(PrintNumbers(1,n));
+Console.WriteLine(PrintNumbers(1, n));
 
 string PrintNumbers(int start, int end)
 {
@@ -19,9 +19,9 @@ string PrintNumbers(int start, int end)
 
 
 Console.Write("Введите M: ");
-int m =int.Parse(Console.ReadLine());
+int m = int.Parse(Console.ReadLine());
 
-Console.WriteLine(PrintNum(m,n));
+Console.WriteLine(PrintNum(m, n));
 
 string PrintNum(int start, int end)
 {
@@ -43,13 +43,13 @@ int Prompt(string messege)  //функция для ввода числовых 
 
 int SumChisel(int n)  // функция которая считает сумму введенных цифр в числе
 {
-    if (n%10 == 0)
+    if (n % 10 == 0)
     {
         return 0;
     }
     else
     {
-        return SumChisel(n/10)+n%10;
+        return SumChisel(n / 10) + n % 10;
     }
 }
 Console.WriteLine(SumChisel(n));
@@ -103,7 +103,7 @@ int MyRec(int a, int b)
     }
     else
     {
-        return a * MyRec(a, b-1);
+        return a * MyRec(a, b - 1);
     }
 }
 Console.WriteLine(MyRec(A, B));
